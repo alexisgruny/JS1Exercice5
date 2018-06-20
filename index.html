@@ -13,12 +13,13 @@
         </form>
         <script>
         function calcul() {
-          var x = document.getElementById("firstNumber").value;
-          var y = document.getElementById("secondNumber").value;
-          var a , z ;
-          a = Math.floor(x);
-          z = Math.floor(y);
-          alert(a * z);
+          var firstNumber = document.getElementById("firstNumber").value;
+          var secondNumber = document.getElementById("secondNumber").value;
+          if(/^[0-9]+$/.test(firstNumber&&secondNumber) == true){
+          firstNumber = Math.floor(firstNumber);
+          secondNumber = Math.floor(secondNumber);
+          alert(firstNumber * secondNumber);
+        }
         }
         </script>
     </body>
