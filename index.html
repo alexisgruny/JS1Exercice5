@@ -12,12 +12,17 @@
             <button  id="submit" name ="submit" onclick="calcul();">Valider</button>
         </form>
         <script>
+        // declaration de la variable
         function calcul() {
+          // recupération des saisies
           var firstNumber = document.getElementById("firstNumber").value;
           var secondNumber = document.getElementById("secondNumber").value;
+          // test regex
           if(/^[0-9]+$/.test(firstNumber&&secondNumber) == true){
+          // ont mets les chiffres a l entier inferieur
           firstNumber = Math.floor(firstNumber);
           secondNumber = Math.floor(secondNumber);
+          // on affiche la multiplication de firstNumber et secondNumber
           alert(firstNumber * secondNumber);
         }
         }
